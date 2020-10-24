@@ -4,31 +4,33 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Javascript Documentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <nav id="navbar">
-    <h1>JS Documentation</h1>
-    <ul>
-      <li><a class="nav-link" href="#introduction"></a>Introduction</li>
-      <li><a class="nav-link" href="#what-you-should-already-know"></a>What you should already know</li>
-      <li><a class="nav-link" href="#javaScript-and-java"></a>Javascript and Java</li>
-      <li><a class="nav-link" href="#hello-world"></a>Hello World</li>
-      <li><a class="nav-link" href="#variables"></a>Variables</li>
-      <li><a class="nav-link" href="#declaring-variables"></a>Variable scope</li>
-      <li><a class="nav-link" href="#global-variables"></a>Global variables</li>
-      <li><a class="nav-link" href="#constants"></a>Constants</li>
-      <li><a class="nav-link" href="#data-types"></a>Data types</li>
-      <li><a class="nav-link" href="#if-else-statement"></a>If...else statement</li>
-      <li><a class="nav-link" href="#while-statement"></a>While statement</li>
-      <li><a class="nav-link" href="#function-declarations"></a>Function declarations</li>
-      <li><a class="nav-link" href="#reference"></a>Reference</li>
-    </ul>
-  </nav>
-
+  <header id="header">
+    <nav id="navbar">
+      <h1>JS Documentation</h1>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#what-you-should-already-know">what-you-should-already-know</a></li>
+        <li><a class="nav-link" href="#javaScript-and-java">Javascript and Java</a></li>
+        <li><a class="nav-link" href="#hello-world">Hello World</a></li>
+        <li><a class="nav-link" href="#variables">Variables</a></li>
+        <li><a class="nav-link" href="#declaring-variables">Variable scope</a></li>
+        <li><a class="nav-link" href="#global-variables"></a>Global variables</li>
+        <li><a class="nav-link" href="#constants">Constants</a></li>
+        <li><a class="nav-link" href="#data-types">Data types</a></li>
+        <li><a class="nav-link" href="#if-else-statement">If...else statement</a></li>
+        <li><a class="nav-link" href="#while-statement">While statement</a></li>
+        <li><a class="nav-link" href="#function-declarations">Function declarations</a></li>
+        <li><a class="nav-link" href="#reference">Reference</a></li>
+      </ul>
+    </nav>
+  </header>
   <main id="main-doc">
     <section class="main-section" id="introduction">
       <h2>Introduction</h2>
@@ -92,7 +94,9 @@
     <section class="main-section" id="hello-world">
       <h2>Hello World</h2>
       <article>
-        To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+        <p>
+          To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+        </p>
         <code>
           function greetMe(yourName) {
           alert("Hello" + yourName );
@@ -121,7 +125,7 @@
     <section class="main-section" id="declaring-variables">
       <h2>Declaring variables</h2>
       <article>
-        You can declare a variable in three ways:
+        <p>You can declare a variable in three ways:</p>
         <p>
           With the keyword var. For example, <code>var x = 42.</code> This syntax can be used to declare both local and global variables.
         </p>
@@ -145,13 +149,12 @@
           JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because
           the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.
         </p>
-        <code>if (true) { var x = 5; } console.log(x); // 5</code>
+        <code>if (true) { var x = 5; } console.log(x); // 5
+        </code>
         <p>
           This behavior changes, when using the let declaration introduced in ECMAScript 2015.
         </p>
-        <code>
-          if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined
-        </code>
+        <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
       </article>
     </section>
     <section class="main-section" id="global-variables">
@@ -226,28 +229,25 @@
     <section class="main-section" id="if-else-statement">
       <h2>if...else statement</h2>
       <article>
-        Use the if statement to execute a statement if a logical condition is
-        true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
-        <code>if (condition) { statement_1; } else { statement_2; }</code>
-        condition can be any expression that evaluates to true or false. See
-        Boolean for an explanation of what evaluates to true and false. If
-        condition evaluates to true, statement_1 is executed; otherwise,
-        statement_2 is executed. statement_1 and statement_2 can be any statement,
-        including further nested if statements.
         <p>
-          You may also compound the statements using else if to have multiple
-          conditions tested in sequence, as follows:
+          Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+        </p>
+        <code>if (condition) { statement_1; } else { statement_2; }
+        </code>
+        <p>
+          condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1
+          and statement_2 can be any statement, including further nested if statements.
+        </p>
+        <p>
+          You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
         </p>
         <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2; } else if (condition_n) { statement_n; } else { statement_last; }
         </code>
-        In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block
-        statements, especially when nesting if statements:
-        <code>if (condition) { statement_1_runs_if_condition_is_true;
-          statement_2_runs_if_condition_is_true; } else {
-          statement_3_runs_if_condition_is_false;
-          statement_4_runs_if_condition_is_false; }
-        </code>
-        It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
+        <p>In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use
+          block
+          statements, especially when nesting if statements:</p>
+        <code>if (condition) { statement_1_runs_if_condition_is_true; statement_2_runs_if_condition_is_true; } else { statement_3_runs_if_condition_is_false; statement_4_runs_if_condition_is_false; }
+        </code>It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
         <code>if (x = y) { /* statements here */ }</code>
         If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
         <code>if ((x = y)) { /* statements here */ }</code>
@@ -256,7 +256,9 @@
     <section class="main-section" id="while-statement">
       <h2>while statement</h2>
       <article>
-        A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
+        <p>
+          A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
+        </p>
         <code>while (condition) statement</code>
         If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
         <p>
@@ -287,13 +289,13 @@
     <section class="main-section" id="function-declarations">
       <h2>Function declarations</h2>
       <article>
-        A function definition (also called a function declaration, or function
-        statement) consists of the function keyword, followed by:
+        <p>
+          A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+        </p>
         <ul>
           <li>The name of the function.</li>
           <li>
-            A list of arguments to the function, enclosed in parentheses and
-            separated by commas.
+            A list of arguments to the function, enclosed in parentheses and separated by commas.
           </li>
           <li>
             The JavaScript statements that define the function, enclosed in curly brackets, { }.
@@ -304,9 +306,8 @@
         </p>
         <code>function square(number) { return number * number; }</code>
         <p>
-          The function square takes one argument, called number. The function
-          consists of one statement that says to return the argument of the
-          function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+          The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the
+          function.
         </p>
         <code>return number * number;</code>
         <p>
